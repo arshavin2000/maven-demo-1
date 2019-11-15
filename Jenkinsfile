@@ -20,11 +20,7 @@ pipeline {
             }
         }
 
-        stage ('DEPLOY') {
-            steps {
-                
-            }
-        }
+
         
     }
 }
