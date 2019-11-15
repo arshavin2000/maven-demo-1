@@ -10,7 +10,7 @@ pipeline {
 
         stage ('BUILD') {
             steps {
-                sh 'mvn install'
+                sh 'source ~/.bash_profile && mvn install'
             }
         }
 
