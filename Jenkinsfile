@@ -23,4 +23,13 @@ pipeline {
       
         
     }
+    post {
+        always {
+            emailext body: 'This is the log and the status of build',
+                recipientProviders: [[$class: 'DevelopersRecipientProvider'], 
+                                     [$class: 'RequesterRecipientProvider']], 
+                subject: 'build status'
+        }
+    }
+
 }
