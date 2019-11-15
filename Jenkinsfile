@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        mvn = "$MAVEN_HOME/bin/mvn"
-    }
     stages {
       
         stage ('CHECKOUT') {
@@ -19,7 +16,7 @@ pipeline {
     
         stage ('TEST') {
             steps {
-                sh 'mvn test'
+                sh 'source ~/.bash_profile && mvn test'
             }
         }
 
