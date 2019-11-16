@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-      stage("publish to nexus") {
+      stage("DEPLOY") {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";
