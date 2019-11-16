@@ -52,7 +52,7 @@ pipeline {
                                 [artifactId: pom.artifactId,
                                 classifier: '',
                                 file: "pom.xml",
-                                type: "pom"]
+                                type: "pom"] 
                             ]
                         );
                     } else {
