@@ -29,18 +29,9 @@ pipeline {
         }
 
       stage("DEPLOY ") {
-            nexusPublisher nexusInstanceId: 'localNexus', 
-                nexusRepositoryId: 'releases', 
-                packages: [[$class: 'MavenPackage', 
-                            mavenAssetList: [[classifier: '', 
-                                              extension: '', 
-                                              filePath: 'target/maven-demo-1-2.0.jar']], 
-                            mavenCoordinate: [artifactId: 'maven-demo-1', 
-                                              groupId: 'tn.esprit', 
-                                              packaging: 'jar', 
-                                              version: '2.0']]]
-   
-          }
+            steps {
+                sh 'source ~/.bash_profile && mvn deploy'
+            }
         
     }
     post {
