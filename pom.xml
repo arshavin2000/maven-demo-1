@@ -18,4 +18,5 @@
 			<url>http://54.154.62.158:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
+	
 </project>
