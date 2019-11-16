@@ -11,6 +11,9 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+	
+	<settings>
+
 	<servers>
 	    <server>
 	      <id>nexus-snapshots</id>
@@ -23,6 +26,8 @@
 	      <password>admin</password>
 	    </server>
 	  </servers>
+	</settings>
+
 	<distributionManagement>
 		<repository>
 			<id>nexus-releases</id>
