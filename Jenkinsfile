@@ -1,13 +1,6 @@
 pipeline {
     agent any
-    
-    environment {
-        NEXUS_VERSION = "nexus3"
-        NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "54.154.62.158:8081"
-        NEXUS_REPOSITORY = "maven-public"
-        NEXUS_CREDENTIAL_ID = "sonar-admin"
-    }
+ 
     stages {
         stage ('CHECKOUT') {
             steps {
@@ -32,6 +25,7 @@ pipeline {
             steps {
                 sh 'source ~/.bash_profile && mvn deploy'
             }
+      }
         
     }
     post {
