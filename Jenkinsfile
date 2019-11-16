@@ -13,7 +13,6 @@ pipeline {
                 git branch: 'master', url: "https://github.com/arshavin2000/maven-demo-1.git"
             }
         }
-
         
         stage ('BUILD') {
             steps {
