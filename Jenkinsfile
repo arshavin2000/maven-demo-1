@@ -4,7 +4,7 @@ pipeline {
       
         stage ('CHECKOUT') {
             steps {
-                git branch: 'master', url: "https://github.com/arshavin2000/maven-demo-1.git"
+                git branch: 'patch-1', url: "https://github.com/arshavin2000/maven-demo-1.git"
             }
         }
 
